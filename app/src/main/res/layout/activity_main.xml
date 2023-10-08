@@ -4,15 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="12dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/imvBanner"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:src="@drawable/banner" />
+    <ImageView
+        android:id="@+id/imvNeeds"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/needs" />
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello Food_ex!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/imbBreakdast"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:src="@drawable/breakfast_menu"/>
+        <ImageButton
+            android:id="@+id/imbLunch"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:src="@drawable/lunch_menu"/>
+        <ImageButton
+            android:id="@+id/imbDinner1"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:src="@drawable/dinner_1_menu"/>
+        <ImageButton
+            android:id="@+id/imbDinner2"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:src="@drawable/dinner_2_menu"/>
+
+    </LinearLayout>
+
+
 
 </LinearLayout>
