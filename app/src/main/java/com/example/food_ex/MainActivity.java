@@ -2,8 +2,10 @@ package com.example.food_ex;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.example.food_ex.databinding.ActivityMainBinding;
 
@@ -19,10 +21,40 @@ public class MainActivity extends AppCompatActivity {
 
         Log.i("Activity: ", "onCreate");
 
-        loadData();
+
+        addEvents();
 
     }
-    private void loadData(){
+    private void addEvents(){
+    binding.imbBreakdast.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(MainActivity.this, SangActivity.class);
+
+            startActivity(intent);
+        }
+    });
+    binding.imbLunch.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(MainActivity.this, TruaActivity.class);
+            startActivity(intent);
+        }
+    });
+    binding.imbDinner1.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(MainActivity.this, ChieuActivity.class);
+            startActivity(intent);
+        }
+    });
+    binding.imbDinner2.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(MainActivity.this, ToiActivity.class);
+            startActivity(intent);
+        }
+    });
 
     }
 
